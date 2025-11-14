@@ -1,0 +1,360 @@
+/* 🌱 Base Styles */
+.home-root {
+  font-family: "Poppins", sans-serif;
+  color: #1b3a1a;
+  background: linear-gradient(180deg, #ffffff, #f8fff3, #fffbe6);
+  overflow-x: hidden;
+}
+
+/* 🌿 Hero Section ............*/
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 2;
+  animation: fadeIn 2s ease forwards;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #1b5e20, #4caf50, #c6a700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+  color: #f4f4f4;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* 🌾 Buttons */
+.btn {
+  padding: 0.9rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, #2e7d32, #66bb6a);
+  color: white;
+  box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
+}
+
+.btn.primary:hover {
+  box-shadow: 0 0 25px rgba(102, 187, 106, 0.7);
+  transform: translateY(-3px);
+}
+
+.btn.ghost {
+  border: 2px solid #c6a700;
+  color: #c6a700;
+  background: transparent;
+}
+
+.btn.ghost:hover {
+  background: #c6a700;
+  color: white;
+  box-shadow: 0 0 20px rgba(198, 167, 0, 0.5);
+}
+
+/* 🌿 About Section */
+.about {
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, #ffffff, #f7fff2);
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.about-img-wrapper {
+  flex: 1 1 40%;
+}
+
+.about-img {
+  width: 100%;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(27, 94, 32, 0.25);
+  transition: transform 0.5s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  flex: 1 1 50%;
+}
+
+.about-text h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: #1b5e20;
+}
+
+.about-text p {
+  color: #2e7d32;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.about-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 2rem;
+}
+
+.about-text li {
+  font-size: 1.05rem;
+  color: #3e4d3e;
+  margin: 0.4rem 0;
+}
+
+/* 🌾 Services */
+.services {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.6rem;
+  color: #1b5e20;
+}
+
+.services .section-desc {
+  color: #3e4d3e;
+  margin: 1rem auto 3rem;
+  max-width: 700px;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(27, 94, 32, 0.1);
+  width: 300px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(76, 175, 80, 0.3);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 1rem 0 0.5rem;
+  color: #1b5e20;
+}
+
+.card p {
+  padding: 0 1rem 1.5rem;
+  color: #3e4d3e;
+  font-size: 1rem;
+}
+
+/* 🌾 Testimonials */
+.testimonial {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, #ffffff, #fdfae6);
+}
+
+.testimonial-card {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.testimonial-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 5px 15px rgba(198, 167, 0, 0.4);
+}
+
+blockquote {
+  font-style: italic;
+  color: #2e7d32;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.farmer-name {
+  font-weight: 600;
+  color: #1b5e20;
+}
+
+.testimonial h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2b5329;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.testimonial .highlight {
+  color: #4caf50;
+  position: relative;
+}
+
+.testimonial .highlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 4px;
+  background: #4caf50;
+  border-radius: 4px;
+  animation: underlineGrow 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes underlineGrow {
+  from { width: 10%; }
+  to { width: 100%; }
+}
+
+/* 🌾 Flowing Image Slider */
+.flow-gallery {
+  overflow: hidden;
+  background: #f9fff8;
+  padding: 40px 0;
+  position: relative;
+  text-align: center;
+}
+
+.flow-gallery h2 {
+  font-size: 2.5rem;
+  color: #1b5e20;
+  margin-bottom: 30px;
+}
+
+.flow-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.flow-track {
+  display: flex;
+  width: max-content;
+  animation: flowLeft 20s linear infinite;
+}
+
+.flow-track img {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  margin: 0 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 128, 0, 0.2);
+  transition: transform 0.8s ease;
+  cursor: pointer;
+}
+
+.flow-track img:hover {
+  transform: scale(1.08);
+  animation-play-state: paused;
+}
+
+@keyframes flowLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Scroll reveal support */
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.8s ease;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flow-track img {
+    width: 150px;
+    height: 100px;
+    margin: 0 8px;
+  }
+  .about-container {
+    flex-direction: column;
+  }
+  .about-img {
+    width: 100%;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ✨ Hero fadeIn animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
