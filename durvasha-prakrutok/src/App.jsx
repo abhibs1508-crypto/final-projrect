@@ -12,7 +12,7 @@ import BlogList from "./pages/Blog";       // 👈 BLOG LIST PAGE
 import BlogDetail from "./pages/BlogDetail"; // 👈 BLOG DETAIL PAGE
 
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -33,7 +33,7 @@ export default function App() {
         <Route path="/blog/:id" element={<BlogDetail />} />  {/* blog detail */}
       </Routes>
 
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }
