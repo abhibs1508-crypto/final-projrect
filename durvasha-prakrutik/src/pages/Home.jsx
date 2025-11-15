@@ -139,17 +139,52 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <section className="testimonial reveal">
-        <h2>What Our Farmers Say</h2>
-        <div className="testimonial-slider">
-          <button className="prev-btn" onClick={prevTestimonial}>&lt;</button>
-          <div className="testimonial-card">
-            <img src={testimonials[currentTestimonial].img} alt={testimonials[currentTestimonial].name} />
-            <blockquote>{testimonials[currentTestimonial].text}</blockquote>
-            <p className="farmer-name">{testimonials[currentTestimonial].name}</p>
-          </div>
-          <button className="next-btn" onClick={nextTestimonial}>&gt;</button>
-        </div>
-      </section>
+  <h2>What Our Farmers Say</h2>
+
+  <div className="testimonial-slider fade-anim">
+    
+    {/* Prev Button */}
+    <button className="prev-btn" onClick={prevTestimonial}>Previous</button>
+
+    {/* Testimonial Card */}
+    <div className="testimonial-card">
+      <img
+        src={testimonials[currentTestimonial].img}
+        alt={testimonials[currentTestimonial].name}
+      />
+
+      {/* Animated Stars */}
+      <div className="stars">⭐⭐⭐⭐⭐</div>
+
+      <blockquote>
+        {testimonials[currentTestimonial].text}
+      </blockquote>
+
+      <p className="farmer-name">{testimonials[currentTestimonial].name}</p>
+      <p className="farmer-location">📍 Gujarat, India</p>
+
+      <p className="farmer-extra">
+        "Durvasha Prakrutik supported me with natural fertilizers, soil
+        improvement techniques and step-by-step guidance. My crop quality and
+        market value improved significantly."
+      </p>
+    </div>
+
+    {/* Next Button */}
+    <button className="next-btn" onClick={nextTestimonial}>Next</button>
+  </div>
+
+  {/* Dots Indicator */}
+  <div className="testimonial-dots">
+    {testimonials.map((_, index) => (
+      <span
+        key={index}
+        className={`dot ${currentTestimonial === index ? "active" : ""}`}
+        onClick={() => setCurrentTestimonial(index)}
+      ></span>
+    ))}
+  </div>
+</section>
 
       {/* Flowing Image Slider Section */}
       <section className="flow-gallery reveal">
